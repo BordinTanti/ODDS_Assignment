@@ -10,17 +10,18 @@ public class ODDS_Assign {
         String str_ten = "";
         String str_digit = "";
         String str_number = "";
-
+        String var_Odd = "Odd" ;
+        String var_Even = "Even" ;
         if (tens != 0 && tens % 2 == 1) {
-            str_ten = str_ten + ("Odd" + tens);
+            str_ten = str_ten + (var_Odd + tens);
         }
         if (tens != 0 && tens % 2 == 0) {
-            str_ten = str_ten + ("Even" + tens);
+            str_ten = str_ten + (var_Even + tens);
         }
         if (digit % 2 == 1) {
-            str_digit = str_digit + ("Odd" + digit);
+            str_digit = str_digit + (var_Odd + digit);
         } else {
-            str_digit = str_digit + ("Even" + digit);
+            str_digit = str_digit + (var_Even + digit);
         }
         str_number = str_ten + str_digit;
         System.out.printf("FunctionA = %s\n", str_number);
@@ -32,17 +33,19 @@ public class ODDS_Assign {
         String text = "";
         String text_ten = "";
         String text_digit = "";
+        String rev_Odd = "DDO" ;
+        String rev_Even = "NEVE" ;
         if (str_tens.isEmpty()) {
             text_ten= "";
         } else if (str_tens.charAt(0) == 'O') {
-            text_ten = "DDO" + str_tens.charAt(3);
+            text_ten = rev_Odd + str_tens.charAt(3);
         } else if (str_tens.charAt(0) == 'E') {
-            text_ten = "NEVE" + str_tens.charAt(4);
+            text_ten = rev_Even + str_tens.charAt(4);
         }
         if (str_digit.charAt(0) == 'O') {
-            text_digit = "DDO" + str_digit.charAt(3);
+            text_digit = rev_Odd + str_digit.charAt(3);
         } else if (str_digit.charAt(0) == 'E') {
-            text_digit = "NEVE" + str_digit.charAt(4);
+            text_digit = rev_Even + str_digit.charAt(4);
         }
         text = text_ten + text_digit;
         System.out.println("FunctionB = " + text);
@@ -103,17 +106,19 @@ public class ODDS_Assign {
         String str_ten = "";
         String str_digit = "";
         String str_number = "";
+        String var_Odd = "Odd" ;
+        String var_Even = "Even" ;
         if(text_ten.isEmpty()){
             str_ten = "" ;
         }else if (text_ten.charAt(0) == 'D') {
-            str_ten = "Odd" + text_ten.charAt(3);
+            str_ten = var_Odd + text_ten.charAt(3);
         } else if (text_ten.charAt(0) == 'N') {
-            str_ten = "Even" + text_ten.charAt(4);
+            str_ten = var_Even + text_ten.charAt(4);
         }
         if (text_digit.charAt(0) == 'D') {
-            str_digit = "Odd" + text_digit.charAt(3);
+            str_digit = var_Odd + text_digit.charAt(3);
         } else if (text_digit.charAt(0) == 'N') {
-            str_digit = "Even" + text_digit.charAt(4);
+            str_digit = var_Even + text_digit.charAt(4);
         }
         str_number = str_ten + str_digit ;
         System.out.println("FunctionE = " + str_number);
